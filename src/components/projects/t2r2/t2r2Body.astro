@@ -1,0 +1,59 @@
+---
+import IconComponent from "../../atoms/IconComponent";
+
+const icons = [
+    {name:"Express", icon:"skill-icons:expressjs-light"},
+    {name:"MongoDB", icon:"skill-icons:mongodb"},
+    {name:"VueJS", icon:"skill-icons:vuejs-dark"},
+    {name:"Flask", icon:"skill-icons:flask-light"},
+    {name:"PDF", icon:"teenyicons:pdf-solid"},
+]
+---
+<section class="py-16 sm:py-20">
+  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+    <div class="grid gap-16 lg:grid-cols-2 lg:gap-24">
+      <div>
+        <!-- Images container -->
+        <img
+          class="mx-auto max-w-xl rounded-3xl"
+          width="800"
+          height="600"
+          src="/assets/picbox/picboxgif.gif"
+          alt="Me working on a project"
+        />
+        <img
+          class="mx-auto max-w-xl rounded-3xl mt-12"
+          width="800"
+          height="600"
+          src="/assets/picbox/uploadpicbox.gif"
+          alt="Me working on a project"
+        />
+      </div>
+      <!-- Content -->
+      <div class="flex flex-col gap-10">
+        <!-- Project explanation -->
+        <div class="space-y-8 sm:space-y-12">
+          <div class="flex items-center justify-between rounded-3xl">
+            <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Public tenders creator</h2>
+            <div class="flex items-center justify-between gap-x-4">
+              {icons.map((icon) => (
+                <IconComponent icon={icon.icon} client:load />
+              ))}
+            </div>
+          </div>
+          <div class="space-y-6">
+            <p class="text-base text-primary-950/70 dark:text-primary-200/70 sm:text-lg">
+              This is my current project, where I am developing a site for helping users to create public Tenders. It manages allows users to create PDF Documents guided by templates and an AI assistant. Although I didn't develop the assistant I know how it works because I need to, as the docs editor works with it. Check it out <a href="https://calestocasticos.innovalabufro.cl/" class="text-brown-400">here</a>.
+          </p>          
+            <p class="text-base text-primary-950/70 dark:text-primary-200/70 sm:text-lg">
+            Well, this is a tough project, as it involves a lot of technologies and a lot of work. I am using Express for the backend, MongoDB for the database, VueJS for the frontend, Cloudflare for the images used in the documents and Flask for the PDF creator. The PDF creator is a microservice that runs in a different server, so I need to manage the communication between the two servers.
+            </p>
+            <p class="text-base text-primary-950/70 dark:text-primary-200/70 sm:text-lg">
+            There were a lot of challenges in this project, but I am happy with the results. I have learned a lot about how to manage a project with a lot of technologies and how to manage the communication between different servers. I am also learning about how to manage the communication between the frontend and the backend, as I need to manage the data that is sent to the PDF creator.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
