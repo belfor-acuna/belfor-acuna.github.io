@@ -1,12 +1,12 @@
 ---
 import IconComponent from "../../atoms/IconComponent"
 const icons = [
-  { name: 'Spring Boot', icon: 'simple-icons:springboot' },
-  { name: 'MySQL', icon: 'skill-icons:mysql-light' },
-  {name:'Thymeleaf', icon:'devicon:thymeleaf'}
+  { name: 'VueJS', icon: 'skill-icons:vuejs-dark' },
+  { name: 'Docker', icon: 'skill-icons:docker' },
+  {name:'Google Cloud', icon:'devicon:googlecloud'},
+  {name:'Gitlab', icon:'skill-icons:gitlab-light'},
 ]
 ---
-
 <section class="py-16 sm:py-20">
   <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
     <div class="grid gap-16 lg:grid-cols-2 lg:gap-24">
@@ -32,7 +32,7 @@ const icons = [
         <!-- Project explanation -->
         <div class="space-y-8 sm:space-y-12">
           <div class="flex items-center justify-between rounded-3xl">
-            <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Picbox</h2>
+            <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Stochastics Calculator</h2>
             <div class="flex items-center justify-between gap-x-4">
               {icons.map((icon) => (
                 <IconComponent icon={icon.icon} client:load />
@@ -41,23 +41,21 @@ const icons = [
           </div>
           <div class="space-y-6">
             <p class="text-base text-primary-950/70 dark:text-primary-200/70 sm:text-lg">
-              This was my first ever web project and it was a great learning experience. I built it using Springboot, MySQL, and Thymeleaf. You can check the source code <a href="https://github.com/belfor-acuna/picbox-repository" class="text-brown-400">here</a>.
+              This web application is a big calculator that helps students to solve problems related to Stochastics Processes. It was built using VueJS and deployed using Docker, Google Cloud and gitlab CI/CD. Check the web site <a href="https://calestocasticos.innovalabufro.cl/" class="text-brown-400">here</a>.
           </p>          
             <p class="text-base text-primary-950/70 dark:text-primary-200/70 sm:text-lg">
-              It's a "Pinterest like" web app where you can create an account, upload images, see other users images, and search via tags and names.
+              The interesting thing about this web is that all calculations ire performed on the client side, so the server only serves the static files. This was done to avoid the server to be overloaded with many requests.
             </p>
             <p class="text-base text-primary-950/70 dark:text-primary-200/70 sm:text-lg">
-              Something really funny about this site is that to achieve the image upload functionality I did the worst thing you can do. I uploaded the images to the database as a blob. I know, I know, it's not the best practice, but it was a great learning experience.
+              This project also allowed me to apply my deployment skills, which I had previously learned in a course. I set up the website on Google Cloud so the product owner could test it and provide feedback before the final release.
             </p>
             <p class="text-base text-primary-950/70 dark:text-primary-200/70 sm:text-lg">
-              Actually, that made me want to learn more about how to setup applications that use cloud services like storage, databases, and more.
-            </p>
-            <p class="text-base text-primary-950/70 dark:text-primary-200/70 sm:text-lg">
-              With this project I realized that I really enjoy working on backend development. I found it fascinating to design and implement the logic that powers the application, manage data, and ensure everything runs smoothly behind the scenes.
-            </p>
+              To streamline this process, I used GitLab CI/CD to automate deployments. This was a great learning experience, giving me hands-on practice with Docker, GitLab, and Google Cloud services.            </p>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+
