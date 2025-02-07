@@ -1,0 +1,57 @@
+---
+import IconComponent from "../../atoms/IconComponent";
+const icons = [
+    {name:"Figma", icon:"skill-icons:figma-light"},
+]
+---
+<section class="py-16 sm:py-20">
+    <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+      <div class="grid gap-16 lg:grid-cols-2 lg:gap-24">
+        <div>
+          <!-- Images container -->
+          <img
+            class="mx-auto max-w-xl rounded-3xl"
+            width="800"
+            height="600"
+            src="/assets/picbox/picboxgif.gif"
+            alt="Me working on a project"
+          />
+          <img
+            class="mx-auto max-w-xl rounded-3xl mt-12"
+            width="800"
+            height="600"
+            src="/assets/picbox/uploadpicbox.gif"
+            alt="Me working on a project"
+          />
+        </div>
+        <!-- Content -->
+        <div class="flex flex-col gap-10">
+          <!-- Project explanation -->
+          <div class="space-y-8 sm:space-y-12">
+            <div class="flex items-center justify-between rounded-3xl">
+              <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">UX/UI Design for Web App</h2>
+              <div class="flex items-center justify-between gap-x-4">
+                {icons.map((icon) => (
+                  <IconComponent icon={icon.icon} client:load />
+                ))}
+              </div>
+            </div>
+            <div class="space-y-6">
+              <p class="text-base text-primary-950/70 dark:text-primary-200/70 sm:text-lg">
+            This is an extense project where I made the full UX design and adapted a template for a web app that helps organizations to evaluate their transparency statutes. I used Figma to create the design and I worked closely with the product owner to make sure the design was aligned with the product vision.   
+            </p>          
+              <p class="text-base text-primary-950/70 dark:text-primary-200/70 sm:text-lg">
+                Through multiple iterations, I created several prototypes, testing them with the team to gather feedback and refine the design. I also worked alongside a professional UX analyst to ensure adherence to industry best practices.              </p>
+              <p class="text-base text-primary-950/70 dark:text-primary-200/70 sm:text-lg">
+                The usage of components and good practices in Figma allowed me to create a design system that was easy to maintain and update. This was very useful because the product owner requested several changes during the development process.
+              </p>
+              <p class="text-base text-primary-950/70 dark:text-primary-200/70 sm:text-lg">
+                When the final design was approved, I made a styles guide and a design system that was used by the developers to implement the design. This was a great experience that allowed me to learn a lot about the design process and the importance of good communication with the product owner and the development team.
+            </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
