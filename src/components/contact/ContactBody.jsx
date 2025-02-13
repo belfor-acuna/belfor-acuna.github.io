@@ -18,8 +18,7 @@ export default function Form() {
   };
 
   const handleSubmit = async () => {
-    console.log("Botón clickeado"); 
-  
+
     setLoading(true);
     setSuccess(null);
   
@@ -39,7 +38,6 @@ export default function Form() {
         }
       );
   
-      console.log("Respuesta del servidor:", response); 
   
       if (response.status === 200) {
         setSuccess("Message sent successfully!");
@@ -55,7 +53,6 @@ export default function Form() {
     setLoading(false);
   };
   
-  console.log("Form component renderizado");
 
   return (
     <section className="py-16 sm:py-20">
@@ -89,7 +86,7 @@ export default function Form() {
                 onChange={handleChange}
                 required
                 className="hover:ring-primary-600 focus:ring-primary-600 dark:hover:ring-primary-400 dark:focus:ring-primary-400 bg-primary-50 dark:bg-primary-950 ring-primary-900/40 dark:ring-primary-200/40 placeholder:text-primary-950/60 dark:placeholder:text-primary-200/60 block w-full appearance-none rounded-md border-0 px-4 py-4 text-base ring-1 transition focus:outline-none focus:ring-2"
-                placeholder="Email"
+                placeholder="Your email"
               />
             </div>
 
