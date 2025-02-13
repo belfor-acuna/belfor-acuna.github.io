@@ -18,7 +18,7 @@ export default function Form() {
   };
 
   const handleSubmit = async () => {
-    console.log("Botón clickeado"); // 🔴 Verifica si esto se imprime en la consola
+    console.log("Botón clickeado"); 
   
     setLoading(true);
     setSuccess(null);
@@ -39,7 +39,7 @@ export default function Form() {
         }
       );
   
-      console.log("Respuesta del servidor:", response); // 🔴 Verifica si se recibe una respuesta
+      console.log("Respuesta del servidor:", response); 
   
       if (response.status === 200) {
         setSuccess("Message sent successfully!");
@@ -74,7 +74,7 @@ export default function Form() {
             </p>
           </div>
 
-          {/* Quitamos el onSubmit del <form> */}
+         
           <form className="mt-3 flex flex-col gap-y-6">
             <div>
               <label htmlFor="email" className="sr-only">
