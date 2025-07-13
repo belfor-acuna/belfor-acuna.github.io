@@ -4,58 +4,63 @@ import IconComponent from '../atoms/IconComponent.jsx';
 const features = [
   {
     id: 'expertise-1',
-    name: 'Backend Development',
+    name: 'Container Orchestration & Kubernetes',
     icons: [
-      { name: 'NestJS', icon: 'logos:nestjs' },
-      { name: 'Express', icon: 'skill-icons:expressjs-dark' },
-      { name: 'Spring Boot', icon: 'simple-icons:springboot' },
-      { name: 'MySQL', icon: 'devicon:mysql-wordmark' },
-      { name: 'MongoDB', icon: 'skill-icons:mongodb' },
-      { name: 'PostgreSQL', icon: 'logos:postgresql' },
+      { name: 'Kubernetes', icon: 'logos:kubernetes' },
+      { name: 'Docker', icon: 'logos:docker-icon' },
+      { name: 'Helm', icon: 'logos:helm' },
     ],
     description:
-      'My primary focus is backend development, where I specialize in building robust and scalable server-side applications using Javascript, TypeScript, and Java. I enjoy designing and implementing APIs, integrating databases, and optimizing performance for large-scale systems. My preferred frameworks include Express, NestJS, and Spring Boot.',
+      'Expert in Kubernetes (k3s bare-metal) cluster management and container orchestration. Specialized in managing multi-environment deployments (dev, preprod, prod) with Helm charts, ConfigMaps, Kubeseal for secrets management, and persistent volumes. Hands-on experience with self-signed TLS certificates and production-grade Kubernetes infrastructure.',
   },
 
   {
     id: 'expertise-2',
-    name: 'Build Automation Tools',
+    name: 'CI/CD & GitOps',
     icons: [
+      { name: 'ArgoCD', icon: 'logos:argo-icon' },
       { name: 'GitLab CI', icon: 'logos:gitlab' },
-      { name: 'Docker', icon: 'logos:docker-icon' },
-      { name: 'Google Cloud', icon: 'logos:google-cloud' },
-      { name: 'Render', icon: 'logos:render' },
+      { name: 'GitHub Actions', icon: 'logos:github-actions' },
+      { name: 'Bash', icon: 'logos:bash-icon' },
     ],
     description:
-      'Experienced in creating and managing CI/CD pipelines using GitLab CI, Docker, Google Cloud, and Render to ensure seamless deployment and development workflows.',
+      'Proficient in GitOps workflows using ArgoCD for continuous deployment and environment synchronization. Expert in building CI/CD pipelines with GitLab CI/CD and GitHub Actions, including environment-based versioning, automated Docker image publication, and semantic release workflows. Strong Bash scripting skills for automation.',
   },
   {
     id: 'expertise-3',
-    name: 'Serverless Computing Platforms',
+    name: 'Infrastructure & Networking',
     icons: [
-      { name: 'Firebase', icon: 'logos:firebase' },
+      { name: 'Traefik', icon: 'logos:traefik' },
+      { name: 'Nginx', icon: 'logos:nginx' },
       { name: 'Cloudflare', icon: 'devicon:cloudflare' },
-      { name: 'AWS', icon: 'skill-icons:aws-light' },
+      { name: 'Linux', icon: 'logos:linux-tux' },
     ],
     description:
-      'Proficient in leveraging cloud services like Firebase and Cloudflare to develop efficient serverless applications with minimal overhead and maximum scalability. I am currently exploring AWS tools like S3, Elastic, Lambda and DynamoBD.',
+      'Experienced in VPS-based infrastructure management with Traefik and Nginx as reverse proxies and load balancers. Skilled in DNS management (Cloudflare/GoDaddy), UFW firewall configuration, TLS/SSL setup, and self-hosted mail server with Mailcow. Linux Foundation certified with strong Ubuntu, Arch, and Debian administration skills.',
   },
   {
     id: 'expertise-4',
-    name: 'UX/UI Design & Prototyping',
-    icons: [{ name: 'Figma', icon: 'logos:figma' }],
+    name: 'Monitoring & Incident Response',
+    icons: [
+      { name: 'ArgoCD', icon: 'logos:argo-icon' },
+      { name: 'Prometheus', icon: 'logos:prometheus' },
+      { name: 'Grafana', icon: 'logos:grafana' },
+      { name: 'PostgreSQL', icon: 'logos:postgresql' },
+    ],
     description:
-      "Skilled in designing intuitive and visually appealing user interfaces using Figma. Passionate about creating effective app flows that accurately represent the client's vision, following the UX design principles.",
+      'Experienced in production incident management including PostgreSQL data corruption recovery, service failure resolution, and rollback procedures. Currently implementing Prometheus and Grafana for comprehensive monitoring. Strong focus on system reliability, documentation of recovery procedures, and DevOps-Development communication workflows.',
   },
   {
     id: 'expertise-5',
-    name: 'Front-end Development',
+    name: 'Backend Development & APIs',
     icons: [
-      { name: 'VueJS', icon: 'logos:vue' },
-      { name: 'React', icon: 'logos:react' },
+      { name: 'NestJS', icon: 'logos:nestjs' },
+      { name: 'Spring Boot', icon: 'simple-icons:springboot' },
+      { name: 'Express', icon: 'skill-icons:expressjs-dark' },
+      { name: 'MongoDB', icon: 'logos:mongodb-icon' },
     ],
     description:
-      'While not my primary focus, I have worked on several projects building responsive and user-friendly web applications using VueJS. I also have experience with React and React Native for cross-platform development.',
+      'Strong foundation in backend development supporting DevOps initiatives. Experienced in building RESTful APIs with NestJS, Express, and Spring Boot. Proficient in database management with PostgreSQL and MongoDB, with focus on scalable architectures that support containerized deployments and microservices.',
   },
 ];
 ---
