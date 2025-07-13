@@ -19,7 +19,10 @@
                 </div>
                 <div class="flex-1">
                   <div class="flex items-center gap-3 mb-2">
-                    <h4 class="text-xl font-medium text-primary-950 dark:text-primary-100">{{ cert.name }}</h4>
+                    <div class="flex flex-col">
+                      <h4 class="text-xl font-medium text-primary-950 dark:text-primary-100">{{ cert.name }}</h4>
+                      <p v-if="cert.subtitle" class="text-sm text-primary-600 dark:text-primary-400 font-medium">{{ cert.subtitle }}</p>
+                    </div>
                     <span
                       v-if="cert.badge"
                       class="bg-primary-600 dark:bg-primary-400 text-white dark:text-primary-950 px-3 py-1 rounded-full text-sm font-medium"
@@ -43,7 +46,18 @@
                     </span>
                   </div>
                   <div v-if="cert.certificateUrl" class="flex gap-3 mb-4">
+                    <button
+                      v-if="cert.isPdf"
+                      @click="openPdfModal(cert.certificateUrl, cert.name)"
+                      class="bg-primary-600 dark:bg-primary-400 hover:bg-primary-700 dark:hover:bg-primary-300 text-white dark:text-primary-950 px-4 py-2 rounded-lg text-sm font-medium transition inline-flex items-center gap-2"
+                    >
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                      </svg>
+                      {{ cert.id === 'degree-1' ? t('certifications.degree.buttons.certificate') : t('certifications.cert.buttons.certificate') }}
+                    </button>
                     <a
+                      v-else
                       :href="cert.certificateUrl"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -113,6 +127,14 @@
         </div>
       </div>
     </div>
+
+    <!-- PDF Modal -->
+    <PdfModal
+      :is-open="isModalOpen"
+      :pdf-url="modalPdfUrl"
+      :title="modalTitle"
+      @close="closePdfModal"
+    />
   </section>
 </template>
 
@@ -120,6 +142,7 @@
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { Icon } from '@iconify/vue'
 import { translations } from '../../translations/index.js'
+import PdfModal from './PdfModal.vue'
 
 // Props
 const props = defineProps({
@@ -127,6 +150,11 @@ const props = defineProps({
 })
 
 const currentLang = ref('en')
+
+// Modal state
+const isModalOpen = ref(false)
+const modalPdfUrl = ref('')
+const modalTitle = ref('')
 
 // Translation function
 const t = (key) => {
@@ -163,6 +191,19 @@ const certifications = computed(() => [
     ],
     certificateUrl: 'https://ti-user-certificates.s3.amazonaws.com/e0df7fbf-a057-42af-8a1f-590912be5460/0c0cf1ac-6d97-476c-a294-2cc068b44a94-belfor-acua-ad566f2d-f2c4-4f19-a0c7-11c5a15a1c44-certificate.pdf',
     credlyBadgeId: 'b6f48d73-8034-4991-8d09-fc2484b02d5b'
+  },
+  {
+    id: 'degree-1',
+    name: t('certifications.degree.title'),
+    subtitle: t('certifications.degree.subtitle'),
+    issuer: t('certifications.degree.issuer'),
+    date: t('certifications.degree.year'),
+    badge: false,
+    description: t('certifications.degree.description'),
+    icon: 'mdi:school',
+    skills: ['Software Engineering', 'Internet Services', 'IT Project Management', 'Information Technologies'],
+    certificateUrl: '/assets/_GRADO BELFOR ROBERTO ACUÑA CASTILLO F71859-.pdf',
+    isPdf: true
   }
 ])
 
@@ -197,6 +238,19 @@ const achievements = computed(() => [
     category: t('certifications.achievements.items.gitops.category')
   },
 ])
+
+// Modal functions
+const openPdfModal = (pdfUrl, title) => {
+  modalPdfUrl.value = pdfUrl
+  modalTitle.value = title
+  isModalOpen.value = true
+}
+
+const closePdfModal = () => {
+  isModalOpen.value = false
+  modalPdfUrl.value = ''
+  modalTitle.value = ''
+}
 
 // Language change handler
 const handleLanguageChange = () => {

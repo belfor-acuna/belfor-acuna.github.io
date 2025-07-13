@@ -74,6 +74,16 @@ export const translations = {
           badge: "View Badge"
         }
       },
+      degree: {
+        title: "Licenciado en Informática",
+        subtitle: "Equivalent to Bachelor's Degree in Computer Science and Engineering",
+        issuer: "Universidad de La Frontera",
+        year: "2024",
+        description: "Licenciado en Informática degree obtained after completing 4 years of Computer Engineering studies and approved internships. This degree provides comprehensive foundation in software engineering, internet services, IT project management, and information technologies.",
+        buttons: {
+          certificate: "View Degree Certificate"
+        }
+      },
       achievements: {
         title: "Key Achievements",
         items: {
@@ -148,7 +158,7 @@ export const translations = {
     about: {
       title: "About Me",
       content: {
-        intro: "Hi! I'm really glad you're here. I'm a Software Engineering student at Universidad de La Frontera, graduating in December 2025, with a strong focus on DevOps and Site Reliability Engineering. Currently working as a DevOps/SRE engineer at e-transparencia and Tendify (Fondef projects), where I manage production Kubernetes environments and build robust CI/CD pipelines. Oh, and I love cats!",
+        intro: "Hi! I'm really glad you're here. I'm a Computer Science graduate (Licenciado en Informática) from Universidad de La Frontera, currently completing my professional internship focused on Kubernetes with a 6-host cluster to obtain my Software Engineering degree. With a strong focus on DevOps and Site Reliability Engineering, I work as a DevOps/SRE engineer at e-transparencia and Tendify (Fondef projects), where I manage production Kubernetes environments and build robust CI/CD pipelines. Oh, and I love cats!",
         expertise: "My expertise spans Kubernetes cluster management (k3s bare-metal), GitOps workflows with ArgoCD, and comprehensive CI/CD automation using GitLab CI and GitHub Actions. I'm Linux Foundation certified and have hands-on experience with production incident management, including PostgreSQL data corruption recovery and system reliability improvements.",
         personal: "When I'm not optimizing deployment pipelines or troubleshooting production issues, I enjoy playing video games, tabletop games, and reading books. I'm also working on a role-playing tabletop game, which has been a fantastic creative challenge. I love experimenting with new DevOps tools and contributing to infrastructure automation projects."
       },
@@ -265,6 +275,16 @@ export const translations = {
           badge: "Ver Insignia"
         }
       },
+      degree: {
+        title: "Licenciado en Informática",
+        subtitle: "",
+        issuer: "Universidad de La Frontera",
+        year: "2024",
+        description: "Grado académico de Licenciado en Informática obtenido tras completar 4 años de estudios en Ingeniería Informática y prácticas aprobadas. Este grado proporciona formación integral en ingeniería de software, servicios de internet, gestión de proyectos informáticos y tecnologías de la información.",
+        buttons: {
+          certificate: "Ver Certificado de Título"
+        }
+      },
       achievements: {
         title: "Logros Clave",
         items: {
@@ -339,7 +359,7 @@ export const translations = {
     about: {
       title: "Acerca de Mí",
       content: {
-        intro: "¡Hola! Me alegra mucho que estés aquí. Soy estudiante de Ingeniería en Software en la Universidad de La Frontera, graduándome en diciembre de 2025, con un fuerte enfoque en DevOps e Ingeniería de Confiabilidad de Sitios. Actualmente trabajo como ingeniero DevOps/SRE en e-transparencia y Tendify (proyectos Fondef), donde gestiono entornos Kubernetes de producción y construyo pipelines CI/CD robustos. ¡Ah, y amo los gatos!",
+        intro: "¡Hola! Me alegra mucho que estés aquí. Soy Licenciado en Informática por la Universidad de La Frontera, actualmente completando mi práctica profesional en Kubernetes con un cluster de 6 hosts para obtener mi título de Ingeniero en Informática. Con un fuerte enfoque en DevOps e Ingeniería de Confiabilidad de Sitios, trabajo como ingeniero DevOps/SRE en e-transparencia y Tendify (proyectos Fondef), donde gestiono entornos Kubernetes de producción y construyo pipelines CI/CD robustos. ¡Ah, y amo los gatos!",
         expertise: "Mi experiencia abarca gestión de clusters Kubernetes (k3s bare-metal), flujos GitOps con ArgoCD y automatización integral de CI/CD usando GitLab CI y GitHub Actions. Estoy certificado por Linux Foundation y tengo experiencia práctica en gestión de incidentes de producción, incluyendo recuperación de corrupción de datos PostgreSQL y mejoras de confiabilidad del sistema.",
         personal: "Cuando no estoy optimizando pipelines de despliegue o solucionando problemas de producción, disfruto jugando videojuegos, juegos de mesa y leyendo libros. También estoy trabajando en un juego de mesa de rol, lo cual ha sido un desafío creativo fantástico. Me encanta experimentar con nuevas herramientas DevOps y contribuir a proyectos de automatización de infraestructura."
       },
