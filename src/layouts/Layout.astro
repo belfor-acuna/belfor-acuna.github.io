@@ -5,6 +5,7 @@ import { ViewTransitions } from 'astro:transitions';
 import Footer from '../components/layout/Footer.astro';
 import Header from '../components/layout/Header.astro';
 import IconComponent from '../components/atoms/IconComponent';
+import TranslationProvider from '../components/atoms/TranslationProvider.jsx';
 
 interface Props {
   title: string;
@@ -27,11 +28,13 @@ const { description, title } = Astro.props;
   <body
     class="bg-primary-50 text-primary-950 dark:bg-primary-950 dark:text-primary-200 antialiased transition"
   >
-    <Header />
-    <main>
-      <slot />
-    </main>
-    <Footer />
+    <TranslationProvider client:load>
+      <Header />
+      <main>
+        <slot />
+      </main>
+      <Footer />
+    </TranslationProvider>
     <style is:global>
       [x-cloak] {
         display: none !important;

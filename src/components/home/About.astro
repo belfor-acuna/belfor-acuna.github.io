@@ -1,24 +1,5 @@
-<section class="py-16 sm:py-20">
-  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-    <div class="grid gap-12 lg:grid-cols-3 lg:gap-8">
-      <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">About Me</h2>
-      <div class="flex flex-col items-start gap-8 sm:gap-10 lg:col-span-2">
-        <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
-          Hi! I’m really glad you’re here. I’m a Software Engineering student at Universidad de La Frontera, graduating in December 2025, with a strong focus on DevOps and Site Reliability Engineering. Currently working as a DevOps/SRE engineer at e-transparencia and Tendify (Fondef projects), where I manage production Kubernetes environments and build robust CI/CD pipelines. Oh, and I love cats!
-        </p>
-        <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
-          My expertise spans Kubernetes cluster management (k3s bare-metal), GitOps workflows with ArgoCD, and comprehensive CI/CD automation using GitLab CI and GitHub Actions. I'm Linux Foundation certified and have hands-on experience with production incident management, including PostgreSQL data corruption recovery and system reliability improvements.
-        </p>
-        <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
-          When I'm not optimizing deployment pipelines or troubleshooting production issues, I enjoy playing video games, tabletop games, and reading books. I’m also working on a role-playing tabletop game, which has been a fantastic creative challenge. I love experimenting with new DevOps tools and contributing to infrastructure automation projects.
-        </p>
-        <a
-          href="/about"
-          class="bg-primary-600 dark:bg-primary-400 hover:bg-primary-700 dark:hover:bg-primary-300 focus-visible:outline-primary-600 dark:focus-visible:outline-primary-400 dark:text-primary-950 inline-flex items-center justify-center rounded-full border border-transparent px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
-        >
-          Read more about me
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+---
+import AboutSection from '../vue/AboutSection.vue';
+---
+
+<AboutSection client:load />

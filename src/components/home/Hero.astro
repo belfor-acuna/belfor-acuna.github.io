@@ -1,23 +1,5 @@
-<section class="py-16 sm:py-20">
-  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-    <div class="flex flex-col gap-16">
-      <div class="flex flex-col items-start gap-8 sm:gap-10">
-        <div class="flex max-w-xl flex-col items-start gap-4 sm:gap-6">
-          <h1 class="text-4xl font-medium tracking-tight sm:text-5xl lg:text-6xl">
-           Hi, I'm <span class="text-primary-600 dark:text-primary-400">Belfor</span> - DevOps & SRE Engineer 🐱
-          </h1>
-          <p class="text-primary-950/70 dark:text-primary-200/70 text-lg sm:text-xl">
-            Passionate about Kubernetes, CI/CD automation, and building reliable infrastructure. Linux Foundation certified with hands-on experience in production environments. Let's build something amazing together!
-          </p>
-        </div>
-        <a
-            href="/contact"
-          class="bg-primary-600 dark:bg-primary-400 hover:bg-primary-700 dark:hover:bg-primary-300 focus-visible:outline-primary-600 dark:focus-visible:outline-primary-400 dark:text-primary-950 inline-flex items-center justify-center rounded-full border border-transparent px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
-        >
-          Contact me 
-        </a>
-      </div>
-      
-    </div>
-  </div>
-</section>
+---
+import HeroSection from '../vue/HeroSection.vue';
+---
+
+<HeroSection client:load />
