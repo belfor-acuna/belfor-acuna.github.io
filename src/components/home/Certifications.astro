@@ -26,10 +26,10 @@ const achievements = [
   },
   {
     id: 'achievement-2',
-    name: 'GitOps Implementation with ArgoCD',
-    description: 'Developed comprehensive CI/CD pipelines with GitHub Actions and GitLab CI featuring environment-based versioning, automatic Docker image publication, and continuous deployment using ArgoCD for synchronized environments.',
-    icon: 'logos:argo-icon',
-    category: 'DevOps'
+    name: 'Secure CI/CD Pipeline Implementation',
+    description: 'Developed security-focused CI/CD pipelines with automated code analysis, coverage reporting, and upcoming Trivy container image vulnerability scanning. Implemented semantic release workflows for branch/environment-based tagging, ensuring complete traceability from code to production deployment.',
+    icon: 'logos:github-actions',
+    category: 'DevSecOps'
   },
   {
     id: 'achievement-3',
@@ -40,11 +40,11 @@ const achievements = [
   },
   {
     id: 'achievement-4',
-    name: 'Infrastructure Automation & Security',
-    description: 'Implemented VPS-based infrastructure with Traefik load balancing, self-signed TLS certificates and DNS management on Cloudflare/GoDaddy.',
-    icon: 'logos:traefik',
-    category: 'Automation'
-  }
+    name: 'GitOps Implementation with ArgoCD',
+    description: 'Developed comprehensive CI/CD pipelines with GitHub Actions and GitLab CI featuring environment-based versioning, automatic Docker image publication, and continuous deployment using ArgoCD for synchronized environments.',
+    icon: 'logos:argo-icon',
+    category: 'DevOps'
+  },
 ];
 ---
 
@@ -58,14 +58,14 @@ const achievements = [
         <h3 class="text-2xl font-medium tracking-tight">Certifications</h3>
         <div class="grid gap-6 lg:grid-cols-1">
           {certifications.map((cert) => (
-            <div class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-6 rounded-3xl px-6 py-8">
+            <div class="bg-white dark:bg-primary-400/10 border border-primary-200 dark:border-primary-400/20 flex flex-col gap-6 rounded-3xl px-6 py-8 shadow-sm">
               <div class="flex flex-col lg:flex-row items-start gap-6">
                 <div class="flex-shrink-0">
                   <IconComponent icon={cert.icon} client:load />
                 </div>
                 <div class="flex-1">
                   <div class="flex items-center gap-3 mb-2">
-                    <h4 class="text-xl font-medium">{cert.name}</h4>
+                    <h4 class="text-xl font-medium text-primary-950 dark:text-primary-100">{cert.name}</h4>
                     {cert.badge && (
                       <span class="bg-primary-600 dark:bg-primary-400 text-white dark:text-primary-950 px-3 py-1 rounded-full text-sm font-medium">
                         Certified
@@ -98,11 +98,24 @@ const achievements = [
                         </svg>
                         View Certificate
                       </a>
+                      {cert.credlyBadgeId && (
+                        <a
+                          href={`https://www.credly.com/badges/${cert.credlyBadgeId}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="bg-primary-600 dark:bg-primary-400 hover:bg-primary-700 dark:hover:bg-primary-300 text-white dark:text-primary-950 px-4 py-2 rounded-lg text-sm font-medium transition inline-flex items-center gap-2"
+                        >
+                          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                          </svg>
+                          View Badge
+                        </a>
+                      )}
                     </div>
                   )}
                 </div>
                 {cert.credlyBadgeId && (
-                  <div class="flex-shrink-0 hidden dark:hidden lg:block">
+                  <div class="flex-shrink-0 hidden lg:block">
                     <div class="credly-badge-container">
                       <div
                         data-iframe-width="150"
@@ -111,21 +124,6 @@ const achievements = [
                         data-share-badge-host="https://www.credly.com"
                       ></div>
                     </div>
-                  </div>
-                )}
-                {cert.credlyBadgeId && (
-                  <div class="flex-shrink-0 lg:hidden">
-                    <a
-                      href={`https://www.credly.com/badges/${cert.credlyBadgeId}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition inline-flex items-center gap-2"
-                    >
-                      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                      </svg>
-                      View on Credly
-                    </a>
                   </div>
                 )}
               </div>
