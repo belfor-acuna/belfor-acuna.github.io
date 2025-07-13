@@ -21,11 +21,19 @@ import IconComponent from "../atoms/IconComponent";
 import LanguageSelector from "../atoms/LanguageSelector.jsx";
 import HeaderNavigation from "../vue/HeaderNavigation.vue";
 import MobileNavigation from "../vue/MobileNavigation.vue";
+import WelcomeText from "../vue/WelcomeText.vue";
 ---
 
 <header
-  x-data="{ open: false }"
-  class="transition"
+  x-data="{
+    open: false,
+    init() {
+      window.addEventListener('close-menu', () => {
+        this.open = false
+      })
+    }
+  }"
+  class="relative z-50 transition"
   :class="{ 'bg-primary-500/10 dark:bg-primary-400/10': open, 'bg-primary-50 dark:bg-primary-950': !(open) }"
 >
   <div
@@ -86,7 +94,7 @@ import MobileNavigation from "../vue/MobileNavigation.vue";
       <!-- Toggle menu -->
       <button
         type="button"
-        class="text-primary-950 dark:text-primary-200 hover:bg-primary-500/10 dark:hover:bg-primary-400/10 ring-primary-950 inline-flex h-14 w-14 items-center justify-center rounded-full transition focus:outline-none focus-visible:ring-2"
+        class="text-primary-950 dark:text-primary-200 hover:bg-primary-500/10 dark:hover:bg-primary-400/10 ring-primary-950 inline-flex h-14 w-14 items-center justify-center rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 hover:scale-105 active:scale-95"
         @click="open = !open"
         @mousedown="if (open) $event.preventDefault()"
         aria-controls="website-menu"
@@ -96,8 +104,8 @@ import MobileNavigation from "../vue/MobileNavigation.vue";
         <span class="sr-only">Toggle menu</span>
         <svg
           x-cloak
-          class="h-8 w-8"
-          :class="{ 'hidden': open, 'block': !(open) }"
+          class="h-8 w-8 transition-all duration-300 ease-in-out"
+          :class="{ 'opacity-0 rotate-90 scale-75': open, 'opacity-100 rotate-0 scale-100': !(open) }"
           xmlns="http://www.w3.org/2000/svg"
           fill="currentColor"
           viewBox="0 0 24 24"
@@ -107,8 +115,8 @@ import MobileNavigation from "../vue/MobileNavigation.vue";
         </svg>
         <svg
           x-cloak
-          class="h-8 w-8"
-          :class="{ 'block': open, 'hidden': !(open) }"
+          class="absolute h-8 w-8 transition-all duration-300 ease-in-out"
+          :class="{ 'opacity-100 rotate-0 scale-100': open, 'opacity-0 rotate-90 scale-75': !(open) }"
           xmlns="http://www.w3.org/2000/svg"
           fill="currentColor"
           viewBox="0 0 24 24"
@@ -122,24 +130,52 @@ import MobileNavigation from "../vue/MobileNavigation.vue";
     </div>
   </div>
 
-  <!-- Menu content -->
+  <!-- Full-screen menu overlay -->
   <div
-    class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8"
+    class="fixed inset-0 z-40 bg-primary-50/95 dark:bg-primary-950/95 backdrop-blur-md"
     id="website-menu"
     x-cloak
     x-show="open"
     x-collapse
     x-collapse.duration.500ms
   >
-    <div class="grid grid-cols-1 gap-16 pb-24 pt-6 lg:grid-cols-2 lg:pt-12">
-      <div
-        class="bg-primary-500/10 dark:bg-primary-400/10 hidden items-center justify-center rounded-3xl px-6 py-8 lg:flex"
-      >
-        <img src="/assets/cat.webp" alt="" class="h-80 w-80" />
-      </div>
+    <!-- Menu content container -->
+    <div class="flex h-full min-h-screen items-center justify-center px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto w-full max-w-6xl">
+        <div class="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-24">
+          <!-- Hero image section -->
+          <div class="flex items-center justify-center order-2 lg:order-1">
+            <div class="relative">
+              <!-- Decorative background -->
+              <div class="absolute -inset-4 bg-gradient-to-r from-primary-500/20 via-primary-400/10 to-primary-600/20 rounded-full blur-2xl"></div>
 
-      <!-- Navigation -->
-      <MobileNavigation client:load />
+              <!-- Main image container -->
+              <div class="relative bg-primary-500/10 dark:bg-primary-400/10 flex items-center justify-center rounded-full p-8 transition-all duration-500 hover:bg-primary-500/15 dark:hover:bg-primary-400/15 hover:scale-105">
+                <img
+                  src="/assets/cat.webp"
+                  alt="Belfor's avatar"
+                  class="h-64 w-64 sm:h-80 sm:w-80 lg:h-96 lg:w-96 transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+
+              <!-- Floating elements -->
+              <div class="absolute -top-4 -right-4 h-8 w-8 bg-primary-500/30 rounded-full animate-pulse"></div>
+              <div class="absolute -bottom-6 -left-6 h-6 w-6 bg-primary-400/40 rounded-full animate-pulse" style="animation-delay: 1s;"></div>
+            </div>
+          </div>
+
+          <!-- Navigation section -->
+          <div class="flex items-center justify-center order-1 lg:order-2">
+            <div class="w-full max-w-md">
+              <!-- Welcome text -->
+              <WelcomeText client:load />
+
+              <!-- Navigation -->
+              <MobileNavigation client:load />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </header>

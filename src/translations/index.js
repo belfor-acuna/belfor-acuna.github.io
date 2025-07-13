@@ -4,7 +4,9 @@ export const translations = {
     nav: {
       home: "Home",
       about: "About me",
-      contact: "Contact me"
+      contact: "Contact me",
+      welcome: "Welcome",
+      welcomeSubtitle: "Explore my portfolio and get to know more about my work"
     },
     
     // Hero Section
@@ -193,7 +195,9 @@ export const translations = {
     nav: {
       home: "Inicio",
       about: "Acerca de mí",
-      contact: "Contáctame"
+      contact: "Contáctame",
+      welcome: "Bienvenido",
+      welcomeSubtitle: "Explora mi portafolio y conoce más sobre mi trabajo"
     },
     
     // Hero Section
