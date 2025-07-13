@@ -1,11 +1,38 @@
 <template>
-  <nav class="flex flex-col gap-2">
-    <transition-group
-      name="stagger"
-      tag="div"
-      class="flex flex-col gap-2"
-      appear
-    >
+  <div class="flex flex-col gap-6">
+    <!-- Close button -->
+    <div class="flex justify-center mb-4">
+      <button
+        @click="closeMenu"
+        class="group relative flex items-center gap-3 rounded-full bg-primary-500/10 dark:bg-primary-400/10 backdrop-blur-sm border border-primary-500/20 dark:border-primary-400/20 px-6 py-3 transition-all duration-300 hover:bg-primary-500/20 dark:hover:bg-primary-400/20 hover:border-primary-500/30 dark:hover:border-primary-400/30 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 shadow-lg shadow-primary-500/10"
+      >
+        <!-- Background glow effect -->
+        <div class="absolute inset-0 rounded-full bg-gradient-to-r from-primary-500/10 via-primary-400/5 to-primary-600/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+
+        <span class="relative text-sm font-medium text-primary-700 dark:text-primary-300 transition-colors group-hover:text-primary-800 dark:group-hover:text-primary-200">
+          {{ t('nav.close') }}
+        </span>
+        <svg
+          class="relative h-5 w-5 text-primary-600 dark:text-primary-400 transition-all duration-300 group-hover:text-primary-700 dark:group-hover:text-primary-300 group-hover:rotate-90"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+        >
+          <path
+            d="M12.0007 10.5865L16.9504 5.63672L18.3646 7.05093L13.4149 12.0007L18.3646 16.9504L16.9504 18.3646L12.0007 13.4149L7.05093 18.3646L5.63672 16.9504L10.5865 12.0007L5.63672 7.05093L7.05093 5.63672L12.0007 10.5865Z"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Navigation links -->
+    <nav class="flex flex-col gap-2">
+      <transition-group
+        name="stagger"
+        tag="div"
+        class="flex flex-col gap-2"
+        appear
+      >
       <a
         v-for="(link, index) in links"
         :key="link.ref"
@@ -14,7 +41,11 @@
         :style="{ transitionDelay: `${index * 50}ms` }"
         @mouseenter="hoveredIndex = index"
         @mouseleave="hoveredIndex = null"
-        @click="closeMenu"
+        @click="(e) => {
+          if (!handleNavigation(link.href)) {
+            e.preventDefault()
+          }
+        }"
       >
       <!-- Background gradient that appears on hover -->
       <div
@@ -73,9 +104,10 @@
           class="absolute bottom-0 left-6 right-6 h-px bg-gradient-to-r from-transparent via-primary-500/30 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
         ></div>
       </div>
-    </a>
-    </transition-group>
-  </nav>
+      </a>
+      </transition-group>
+    </nav>
+  </div>
 </template>
 
 <script setup>
@@ -89,6 +121,34 @@ const hoveredIndex = ref(null)
 const closeMenu = () => {
   // Dispatch custom event to close menu
   window.dispatchEvent(new CustomEvent('close-menu'))
+}
+
+// Function to handle navigation with smooth scroll
+const handleNavigation = (href) => {
+  if (href.startsWith('/#')) {
+    // Handle anchor links with smooth scroll
+    const targetId = href.substring(2) // Remove '/#'
+    const targetElement = document.getElementById(targetId)
+
+    if (targetElement) {
+      // Close menu first
+      closeMenu()
+
+      // Wait a bit for menu to close, then scroll
+      setTimeout(() => {
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        })
+      }, 300)
+
+      return false // Prevent default navigation
+    }
+  }
+
+  // For regular links, close menu and navigate normally
+  closeMenu()
+  return true
 }
 
 // Translation function
@@ -116,11 +176,26 @@ const links = computed(() => [
   },
   {
     ref: '02',
+    name: t('nav.expertise'),
+    href: '/#expertise',
+  },
+  {
+    ref: '03',
+    name: t('nav.achievements'),
+    href: '/#achievements',
+  },
+  {
+    ref: '04',
+    name: t('nav.experience'),
+    href: '/#experience',
+  },
+  {
+    ref: '05',
     name: t('nav.about'),
     href: '/about',
   },
   {
-    ref: '03',
+    ref: '06',
     name: t('nav.contact'),
     href: '/contact',
   },

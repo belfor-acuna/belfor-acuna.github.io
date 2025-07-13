@@ -1,5 +1,7 @@
 ---
 import ExpertiseSection from '../vue/ExpertiseSection.vue';
+
+const { id } = Astro.props;
 ---
 
-<ExpertiseSection client:load />
+<ExpertiseSection client:load id={id} />

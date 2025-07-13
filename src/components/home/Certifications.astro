@@ -1,5 +1,7 @@
 ---
 import CertificationsSection from '../vue/CertificationsSection.vue';
+
+const { id } = Astro.props;
 ---
 
-<CertificationsSection client:load />
+<CertificationsSection client:load id={id} />

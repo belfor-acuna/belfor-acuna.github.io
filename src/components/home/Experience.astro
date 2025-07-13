@@ -1,5 +1,7 @@
 ---
 import ExperienceSection from '../vue/ExperienceSection.vue';
+
+const { id } = Astro.props;
 ---
 
-<ExperienceSection client:load />
+<ExperienceSection client:load id={id} />

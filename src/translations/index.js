@@ -5,8 +5,12 @@ export const translations = {
       home: "Home",
       about: "About me",
       contact: "Contact me",
+      expertise: "My Expertise",
+      experience: "Work Experience",
+      achievements: "Achievements",
       welcome: "Welcome",
-      welcomeSubtitle: "Explore my portfolio and get to know more about my work"
+      welcomeSubtitle: "Explore my portfolio and get to know more about my work",
+      close: "Close menu"
     },
     
     // Hero Section
@@ -196,8 +200,12 @@ export const translations = {
       home: "Inicio",
       about: "Acerca de mí",
       contact: "Contáctame",
+      expertise: "Mi Experiencia",
+      experience: "Experiencia Laboral",
+      achievements: "Logros",
       welcome: "Bienvenido",
-      welcomeSubtitle: "Explora mi portafolio y conoce más sobre mi trabajo"
+      welcomeSubtitle: "Explora mi portafolio y conoce más sobre mi trabajo",
+      close: "Cerrar menú"
     },
     
     // Hero Section

@@ -1,5 +1,5 @@
 <template>
-  <section class="py-16 sm:py-20">
+  <section class="py-16 sm:py-20" :id="id">
     <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
       <div class="grid gap-12 lg:grid-cols-3 lg:gap-8">
         <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">{{ t('expertise.title') }}</h2>
@@ -77,6 +77,11 @@
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { Icon } from '@iconify/vue'
 import { translations } from '../../translations/index.js'
+
+// Props
+const props = defineProps({
+  id: String
+})
 
 const currentLang = ref('en')
 const selectedIndex = ref(null)
