@@ -21,7 +21,6 @@ import IconComponent from "../atoms/IconComponent";
 import LanguageSelector from "../atoms/LanguageSelector.jsx";
 import HeaderNavigation from "../vue/HeaderNavigation.vue";
 import MobileNavigation from "../vue/MobileNavigation.vue";
-import WelcomeText from "../vue/WelcomeText.vue";
 ---
 
 <header
@@ -140,9 +139,38 @@ import WelcomeText from "../vue/WelcomeText.vue";
     x-collapse.duration.500ms
   >
     <!-- Menu content container -->
-    <div class="flex h-full min-h-screen items-center justify-center px-4 sm:px-6 lg:px-8">
-      <div class="mx-auto w-full max-w-6xl">
-        <div class="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-24">
+    <div class="h-full min-h-screen">
+      <!-- Close button in same position as header -->
+      <div class="mx-auto flex max-w-2xl items-center justify-between px-4 py-4 sm:px-6 sm:py-6 lg:max-w-7xl lg:px-8">
+        <!-- Empty space for logo alignment -->
+        <div class="flex">
+          <div class="h-8 w-8"></div> <!-- Placeholder for logo space -->
+        </div>
+
+        <!-- Close button -->
+        <div class="-mr-2 flex items-center">
+          <button
+            @click="open = false"
+            class="text-primary-950 dark:text-primary-200 hover:bg-primary-500/10 dark:hover:bg-primary-400/10 ring-primary-950 inline-flex h-14 w-14 items-center justify-center rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 hover:scale-105 active:scale-95"
+          >
+            <span class="sr-only">Close menu</span>
+            <svg
+              class="h-8 w-8 text-primary-950 dark:text-primary-200 transition-all duration-300 ease-in-out hover:rotate-90"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                d="M12.0007 10.5865L16.9504 5.63672L18.3646 7.05093L13.4149 12.0007L18.3646 16.9504L16.9504 18.3646L12.0007 13.4149L7.05093 18.3646L5.63672 16.9504L10.5865 12.0007L5.63672 7.05093L7.05093 5.63672L12.0007 10.5865Z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8 flex-1 flex items-center justify-center">
+        <div class="w-full grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-20">
           <!-- Hero image section -->
           <div class="flex items-center justify-center order-2 lg:order-1">
             <div class="relative">
@@ -166,10 +194,7 @@ import WelcomeText from "../vue/WelcomeText.vue";
 
           <!-- Navigation section -->
           <div class="flex items-center justify-center order-1 lg:order-2">
-            <div class="w-full max-w-md">
-              <!-- Welcome text -->
-              <WelcomeText client:load />
-
+            <div class="w-full max-w-lg">
               <!-- Navigation -->
               <MobileNavigation client:load />
             </div>

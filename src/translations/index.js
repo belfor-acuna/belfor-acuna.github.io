@@ -2,14 +2,10 @@ export const translations = {
   en: {
     // Navigation & General
     nav: {
-      home: "Home",
       about: "About me",
-      contact: "Contact me",
       expertise: "My Expertise",
       experience: "Work Experience",
       achievements: "Achievements",
-      welcome: "Welcome",
-      welcomeSubtitle: "Explore my portfolio and get to know more about my work",
       close: "Close menu"
     },
     
@@ -197,14 +193,10 @@ export const translations = {
   es: {
     // Navigation & General
     nav: {
-      home: "Inicio",
       about: "Acerca de mí",
-      contact: "Contáctame",
       expertise: "Mi Experiencia",
       experience: "Experiencia Laboral",
       achievements: "Logros",
-      welcome: "Bienvenido",
-      welcomeSubtitle: "Explora mi portafolio y conoce más sobre mi trabajo",
       close: "Cerrar menú"
     },
     

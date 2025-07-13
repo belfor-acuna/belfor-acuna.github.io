@@ -1,36 +1,10 @@
 <template>
-  <div class="flex flex-col gap-6">
-    <!-- Close button -->
-    <div class="flex justify-center mb-4">
-      <button
-        @click="closeMenu"
-        class="group relative flex items-center gap-3 rounded-full bg-primary-500/10 dark:bg-primary-400/10 backdrop-blur-sm border border-primary-500/20 dark:border-primary-400/20 px-6 py-3 transition-all duration-300 hover:bg-primary-500/20 dark:hover:bg-primary-400/20 hover:border-primary-500/30 dark:hover:border-primary-400/30 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 shadow-lg shadow-primary-500/10"
-      >
-        <!-- Background glow effect -->
-        <div class="absolute inset-0 rounded-full bg-gradient-to-r from-primary-500/10 via-primary-400/5 to-primary-600/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
-
-        <span class="relative text-sm font-medium text-primary-700 dark:text-primary-300 transition-colors group-hover:text-primary-800 dark:group-hover:text-primary-200">
-          {{ t('nav.close') }}
-        </span>
-        <svg
-          class="relative h-5 w-5 text-primary-600 dark:text-primary-400 transition-all duration-300 group-hover:text-primary-700 dark:group-hover:text-primary-300 group-hover:rotate-90"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-        >
-          <path
-            d="M12.0007 10.5865L16.9504 5.63672L18.3646 7.05093L13.4149 12.0007L18.3646 16.9504L16.9504 18.3646L12.0007 13.4149L7.05093 18.3646L5.63672 16.9504L10.5865 12.0007L5.63672 7.05093L7.05093 5.63672L12.0007 10.5865Z"
-          />
-        </svg>
-      </button>
-    </div>
-
-    <!-- Navigation links -->
-    <nav class="flex flex-col gap-2">
+  <!-- Navigation links -->
+  <nav class="flex flex-col gap-3">
       <transition-group
         name="stagger"
         tag="div"
-        class="flex flex-col gap-2"
+        class="flex flex-col gap-3"
         appear
       >
       <a
@@ -58,19 +32,19 @@
       ></div>
 
       <!-- Main content -->
-      <div class="relative bg-primary-50/80 dark:bg-primary-900/50 backdrop-blur-sm border border-primary-200/30 dark:border-primary-700/30 rounded-2xl px-6 py-6 sm:px-8 sm:py-8 transition-all duration-300 group-hover:bg-primary-100/80 dark:group-hover:bg-primary-800/60 group-hover:border-primary-300/40 dark:group-hover:border-primary-600/40 group-hover:shadow-lg group-hover:shadow-primary-500/10">
+      <div class="relative bg-primary-50/80 dark:bg-primary-900/50 backdrop-blur-sm border border-primary-200/30 dark:border-primary-700/30 rounded-2xl px-5 py-5 sm:px-7 sm:py-6 transition-all duration-300 group-hover:bg-primary-100/80 dark:group-hover:bg-primary-800/60 group-hover:border-primary-300/40 dark:group-hover:border-primary-600/40 group-hover:shadow-lg group-hover:shadow-primary-500/10">
         <div class="flex items-center justify-between">
-          <div class="flex items-center gap-6">
+          <div class="flex items-center gap-4">
             <!-- Reference number with enhanced styling -->
             <span
-              class="flex h-8 w-8 items-center justify-center rounded-full bg-primary-500/10 dark:bg-primary-400/10 text-xs font-medium text-primary-600 dark:text-primary-400 transition-all duration-300 group-hover:bg-primary-500/20 dark:group-hover:bg-primary-400/20 group-hover:scale-110"
+              class="flex h-7 w-7 items-center justify-center rounded-full bg-primary-500/10 dark:bg-primary-400/10 text-xs font-medium text-primary-600 dark:text-primary-400 transition-all duration-300 group-hover:bg-primary-500/20 dark:group-hover:bg-primary-400/20 group-hover:scale-110"
             >
               {{ link.ref }}
             </span>
 
             <!-- Link name with improved typography -->
             <span
-              class="text-2xl sm:text-3xl font-medium tracking-tight text-primary-950 dark:text-primary-200 transition-all duration-300 group-hover:text-primary-900 dark:group-hover:text-primary-100"
+              class="text-xl sm:text-2xl font-medium tracking-tight text-primary-950 dark:text-primary-200 transition-all duration-300 group-hover:text-primary-900 dark:group-hover:text-primary-100"
             >
               {{ link.name }}
             </span>
@@ -79,7 +53,7 @@
           <!-- Arrow with enhanced animation -->
           <div class="relative">
             <svg
-              class="h-6 w-6 text-primary-600 dark:text-primary-400 transition-all duration-300 group-hover:text-primary-700 dark:group-hover:text-primary-300 group-hover:translate-x-1"
+              class="h-5 w-5 text-primary-600 dark:text-primary-400 transition-all duration-300 group-hover:text-primary-700 dark:group-hover:text-primary-300 group-hover:translate-x-1"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
@@ -104,10 +78,9 @@
           class="absolute bottom-0 left-6 right-6 h-px bg-gradient-to-r from-transparent via-primary-500/30 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
         ></div>
       </div>
-      </a>
-      </transition-group>
-    </nav>
-  </div>
+    </a>
+    </transition-group>
+  </nav>
 </template>
 
 <script setup>
@@ -171,33 +144,23 @@ const t = (key) => {
 const links = computed(() => [
   {
     ref: '01',
-    name: t('nav.home'),
-    href: '/',
-  },
-  {
-    ref: '02',
     name: t('nav.expertise'),
     href: '/#expertise',
   },
   {
-    ref: '03',
+    ref: '02',
     name: t('nav.achievements'),
     href: '/#achievements',
   },
   {
-    ref: '04',
+    ref: '03',
     name: t('nav.experience'),
     href: '/#experience',
   },
   {
-    ref: '05',
+    ref: '04',
     name: t('nav.about'),
     href: '/about',
-  },
-  {
-    ref: '06',
-    name: t('nav.contact'),
-    href: '/contact',
   },
 ])
 
