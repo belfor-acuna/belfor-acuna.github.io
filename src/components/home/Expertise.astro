@@ -28,18 +28,6 @@ const features = [
   },
   {
     id: 'expertise-3',
-    name: 'Infrastructure & Networking',
-    icons: [
-      { name: 'Traefik', icon: 'logos:traefik' },
-      { name: 'Nginx', icon: 'logos:nginx' },
-      { name: 'Cloudflare', icon: 'devicon:cloudflare' },
-      { name: 'Linux', icon: 'logos:linux-tux' },
-    ],
-    description:
-      'Experienced in VPS-based infrastructure management with Traefik and Nginx as reverse proxies and load balancers. Skilled in DNS management (Cloudflare/GoDaddy), UFW firewall configuration, TLS/SSL setup, and self-hosted mail server with Mailcow. Linux Foundation certified with strong Ubuntu, Arch, and Debian administration skills.',
-  },
-  {
-    id: 'expertise-4',
     name: 'Monitoring & Incident Response',
     icons: [
       { name: 'ArgoCD', icon: 'logos:argo-icon' },
@@ -51,16 +39,40 @@ const features = [
       'Experienced in production incident management including PostgreSQL data corruption recovery, service failure resolution, and rollback procedures. Currently implementing Prometheus and Grafana for comprehensive monitoring. Strong focus on system reliability, documentation of recovery procedures, and DevOps-Development communication workflows.',
   },
   {
-    id: 'expertise-5',
-    name: 'Backend Development & APIs',
+    id: 'expertise-4',
+    name: 'Cloud Engineering & Platforms',
     icons: [
-      { name: 'NestJS', icon: 'logos:nestjs' },
-      { name: 'Spring Boot', icon: 'simple-icons:springboot' },
-      { name: 'Express', icon: 'skill-icons:expressjs-dark' },
-      { name: 'MongoDB', icon: 'logos:mongodb-icon' },
+      { name: 'Google Cloud', icon: 'logos:google-cloud' },
+      { name: 'AWS', icon: 'skill-icons:aws-light' },
+      { name: 'Firebase', icon: 'devicon:firebase' },
     ],
     description:
-      'Strong foundation in backend development supporting DevOps initiatives. Experienced in building RESTful APIs with NestJS, Express, and Spring Boot. Proficient in database management with PostgreSQL and MongoDB, with focus on scalable architectures that support containerized deployments and microservices.',
+      'Extensive hands-on experience with cloud platforms and services. Proficient in Google Cloud Platform with significant experience in Compute Engine for scalable VM deployments. AWS novice through homelab projects including S3 for object storage, EC2 for compute instances, DynamoDB for NoSQL databases, and IAM for security management.',
+  },
+  {
+    id: 'expertise-5',
+    name: 'Infrastructure & Networking',
+    icons: [
+      { name: 'Traefik', icon: 'logos:traefik' },
+      { name: 'Nginx', icon: 'logos:nginx' },
+      { name: 'Cloudflare', icon: 'devicon:cloudflare' },
+      { name: 'Linux', icon: 'logos:linux-tux' },
+    ],
+    description:
+      'Experienced in VPS-based infrastructure management with Traefik and Nginx as reverse proxies and load balancers. Skilled in DNS management (Cloudflare/GoDaddy), UFW firewall configuration, TLS/SSL setup, and self-hosted mail server with Mailcow. Linux Foundation certified with strong Ubuntu, Arch, and Debian administration skills.',
+  },
+  {
+    id: 'expertise-6',
+    name: 'Fullstack Development',
+    icons: [
+      { name: 'Vue.js', icon: 'logos:vue' },
+      { name: 'React', icon: 'logos:react' },
+      { name: 'NestJS', icon: 'logos:nestjs' },
+      { name: 'Express', icon: 'skill-icons:expressjs-dark' },
+      { name: 'Spring Boot', icon: 'simple-icons:springboot' },
+    ],
+    description:
+      'Comprehensive fullstack development experience that strongly supports DevOps/SRE work. Frontend expertise with Vue.js and React enables better understanding of application architecture and user-facing performance issues. Backend proficiency with NestJS, Express, and Spring Boot, combined with database management experience in PostgreSQL, MySQL, and MongoDB, provides deep insight into application deployment requirements, performance optimization, and microservices architecture - essential knowledge for effective infrastructure management and troubleshooting.',
   },
 ];
 ---
@@ -97,9 +109,13 @@ const features = [
                     <div class="flex items-center justify-between rounded-3xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2 group-focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200">
                       <div class="flex gap-x-6 items-center">
                         <span class="font-medium">{feature.name}</span>
-                      <div class="flex items-center justify-between gap-x-4">
+                      <div class="flex items-center justify-between gap-x-6">
                         {feature.icons.map((icon) => (
-                          <IconComponent icon={icon.icon} client:load />
+                          <div class="relative" title={icon.name}>
+                            <div class="p-2 hover:bg-primary-100 dark:hover:bg-primary-800 rounded-lg transition-colors duration-200">
+                              <IconComponent icon={icon.icon} client:load />
+                            </div>
+                          </div>
                         ))}
                       </div>
                       </div>
