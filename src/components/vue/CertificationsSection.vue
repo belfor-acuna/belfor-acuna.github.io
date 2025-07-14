@@ -175,6 +175,19 @@ const t = (key) => {
 // Certifications computed property
 const certifications = computed(() => [
   {
+    id: 'degree-1',
+    name: t('certifications.degree.title'),
+    subtitle: t('certifications.degree.subtitle'),
+    issuer: t('certifications.degree.issuer'),
+    date: t('certifications.degree.year'),
+    badge: false,
+    description: t('certifications.degree.description'),
+    icon: 'mdi:school',
+    skills: ['Software Engineering', 'Internet Services', 'IT Project Management', 'Information Technologies'],
+    certificateUrl: '/assets/_GRADO BELFOR ROBERTO ACUÑA CASTILLO F71859-.pdf',
+    isPdf: true
+  },
+  {
     id: 'cert-1',
     name: t('certifications.cert.title'),
     issuer: t('certifications.cert.issuer'),
@@ -191,19 +204,6 @@ const certifications = computed(() => [
     ],
     certificateUrl: 'https://ti-user-certificates.s3.amazonaws.com/e0df7fbf-a057-42af-8a1f-590912be5460/0c0cf1ac-6d97-476c-a294-2cc068b44a94-belfor-acua-ad566f2d-f2c4-4f19-a0c7-11c5a15a1c44-certificate.pdf',
     credlyBadgeId: 'b6f48d73-8034-4991-8d09-fc2484b02d5b'
-  },
-  {
-    id: 'degree-1',
-    name: t('certifications.degree.title'),
-    subtitle: t('certifications.degree.subtitle'),
-    issuer: t('certifications.degree.issuer'),
-    date: t('certifications.degree.year'),
-    badge: false,
-    description: t('certifications.degree.description'),
-    icon: 'mdi:school',
-    skills: ['Software Engineering', 'Internet Services', 'IT Project Management', 'Information Technologies'],
-    certificateUrl: '/assets/_GRADO BELFOR ROBERTO ACUÑA CASTILLO F71859-.pdf',
-    isPdf: true
   }
 ])
 

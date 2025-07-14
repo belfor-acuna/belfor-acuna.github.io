@@ -277,7 +277,7 @@ export const translations = {
       },
       degree: {
         title: "Licenciado en Informática",
-        subtitle: "",
+        subtitle: "Grado Académico en Ciencias de la Computación e Ingeniería",
         issuer: "Universidad de La Frontera",
         year: "2024",
         description: "Grado académico de Licenciado en Informática obtenido tras completar 4 años de estudios en Ingeniería Informática y prácticas aprobadas. Este grado proporciona formación integral en ingeniería de software, servicios de internet, gestión de proyectos informáticos y tecnologías de la información.",
