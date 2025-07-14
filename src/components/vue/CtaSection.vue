@@ -1,5 +1,5 @@
 <template>
-  <section class="py-16 sm:py-20">
+  <section id="contact" class="py-16 sm:py-20">
     <div class="mx-auto max-w-2xl px-4 text-center sm:px-6 lg:max-w-7xl lg:px-8">
       <div
         class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col items-center gap-8 rounded-3xl px-5 py-16 sm:gap-10"
@@ -12,12 +12,51 @@
             {{ t('cta.description') }}
           </p>
         </div>
-        <a
-          href="/contact"
-          class="bg-primary-600 dark:bg-primary-400 hover:bg-primary-700 dark:hover:bg-primary-300 focus-visible:outline-primary-600 dark:focus-visible:outline-primary-400 dark:text-primary-950 inline-flex items-center justify-center rounded-full border border-transparent px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
-        >
-          {{ t('cta.button') }}
-        </a>
+        <!-- Contact Links -->
+        <div class="flex items-center justify-center gap-8 sm:gap-12">
+          <!-- LinkedIn -->
+          <a
+            href="https://linkedin.com/in/belfor-acuna"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group flex flex-col items-center gap-3 transition-transform hover:scale-110"
+          >
+            <div class="bg-primary-600 dark:bg-primary-400 hover:bg-primary-700 dark:hover:bg-primary-300 flex items-center justify-center rounded-full p-4 transition-colors">
+              <Icon icon="mdi:linkedin" class="h-8 w-8 text-white dark:text-primary-950" />
+            </div>
+            <span class="text-sm font-medium text-primary-950 dark:text-primary-200 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+              LinkedIn
+            </span>
+          </a>
+
+          <!-- Email -->
+          <a
+            href="mailto:b.acuna.cas@gmail.com"
+            class="group flex flex-col items-center gap-3 transition-transform hover:scale-110"
+          >
+            <div class="bg-primary-600 dark:bg-primary-400 hover:bg-primary-700 dark:hover:bg-primary-300 flex items-center justify-center rounded-full p-4 transition-colors">
+              <Icon icon="mdi:email" class="h-8 w-8 text-white dark:text-primary-950" />
+            </div>
+            <span class="text-sm font-medium text-primary-950 dark:text-primary-200 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+              Email
+            </span>
+          </a>
+
+          <!-- Discord -->
+          <a
+            href="https://discord.gg/QQDgfvEYZZ"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group flex flex-col items-center gap-3 transition-transform hover:scale-110"
+          >
+            <div class="bg-primary-600 dark:bg-primary-400 hover:bg-primary-700 dark:hover:bg-primary-300 flex items-center justify-center rounded-full p-4 transition-colors">
+              <Icon icon="ic:baseline-discord" class="h-8 w-8 text-white dark:text-primary-950" />
+            </div>
+            <span class="text-sm font-medium text-primary-950 dark:text-primary-200 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+              Discord
+            </span>
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -25,6 +64,7 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
+import { Icon } from '@iconify/vue'
 import { translations } from '../../translations/index.js'
 
 const currentLang = ref('en')
