@@ -158,11 +158,41 @@ export const translations = {
     about: {
       title: "About Me",
       content: {
-        intro: "Hi! I'm really glad you're here. I'm a Computer Science graduate (Licenciado en Informática) from Universidad de La Frontera, currently completing my professional internship focused on Kubernetes with a 6-host cluster to obtain my Software Engineering degree. With a strong focus on DevOps and Site Reliability Engineering, I work as a DevOps/SRE engineer at e-transparencia and Tendify (Fondef projects), where I manage production Kubernetes environments and build robust CI/CD pipelines. Oh, and I love cats!",
-        expertise: "My expertise spans Kubernetes cluster management (k3s bare-metal), GitOps workflows with ArgoCD, and comprehensive CI/CD automation using GitLab CI and GitHub Actions. I'm Linux Foundation certified and have hands-on experience with production incident management, including PostgreSQL data corruption recovery and system reliability improvements.",
-        personal: "When I'm not optimizing deployment pipelines or troubleshooting production issues, I enjoy playing video games, tabletop games, and reading books. I'm also working on a role-playing tabletop game, which has been a fantastic creative challenge. I love experimenting with new DevOps tools and contributing to infrastructure automation projects."
+        intro: "Hi! I'm really glad you're here. I'm a Computer Science graduate (Licenciado en Informática) from Universidad de La Frontera, currently completing my professional internship focused on Kubernetes with a 6-host cluster to obtain my Software Engineering degree.",
+        expertise: "With a strong focus on DevOps and Site Reliability Engineering, I work as a DevOps/SRE engineer at e-transparencia and Tendify (Fondef projects), where I manage production Kubernetes environments and build robust CI/CD pipelines. I'm Linux Foundation certified with hands-on experience in production incident management.",
+        personal: "What drives me is my passion for SRE/DevOps roles with high responsibility where teams can rely on me. I have an active hunger for knowledge and continuous improvement in my skills and tools. When I'm not optimizing systems, I enjoy gaming, reading, and working on creative projects. Oh, and I love cats!"
       },
       cta: "Read more about me"
+    },
+
+    // Mission Section (About Page)
+    mission: {
+      title: "About Me",
+      content: {
+        intro: "Well, as you might already know by now, I'm a Computer Science graduate (Licenciado en Informática) from Universidad de La Frontera. I'm currently completing my professional internship focused on Kubernetes infrastructure, working with a 6-host cluster to obtain my Software Engineering degree. I initially pursued a different career before switching to computer sciences in 2022 because I love programming and wanted to make a career out of it.",
+        evolution: "Over the years, I've evolved from working on various projects like backend APIs and interactive applications to specializing in DevOps and Site Reliability Engineering. This transition has been natural for me because I've always been drawn to understanding how systems work at a deeper level and ensuring they operate reliably at scale.",
+        passion: "What truly drives me is my passion for SRE and DevOps roles. I love these positions because they offer a macro-level perspective that complements development work beautifully. This systems-thinking approach is incredibly attractive to me - I get to focus on reliability, scalability, automation, and secure practices, ensuring all the pieces work together as a cohesive system.",
+        responsibility: "I thrive in positions with high responsibility where teams can rely on me to maintain critical infrastructure. I have an active hunger for knowledge and continuous improvement - whether it's exploring new Kubernetes features, diving into monitoring solutions, or experimenting with new DevOps technologies.",
+        personal: "Outside of work, I'm calm and easygoing. I really like tranquility, peaceful environments, playing instruments, and I'm always listening to music."
+      },
+      stats: {
+        age: {
+          label: "Age",
+          value: "25"
+        },
+        pipelines: {
+          label: "Failed pipelines",
+          value: "rather not say"
+        },
+        cats: {
+          label: "Street cats I couldn't resist petting",
+          value: "999+"
+        },
+        programming: {
+          label: "Hours spent programming (and getting backaches)",
+          value: "a lot"
+        }
+      }
     },
 
     // Projects Section
@@ -359,11 +389,41 @@ export const translations = {
     about: {
       title: "Acerca de Mí",
       content: {
-        intro: "¡Hola! Me alegra mucho que estés aquí. Soy Licenciado en Informática por la Universidad de La Frontera, actualmente completando mi práctica profesional en Kubernetes con un cluster de 6 hosts para obtener mi título de Ingeniero en Informática. Con un fuerte enfoque en DevOps e Ingeniería de Confiabilidad de Sitios, trabajo como ingeniero DevOps/SRE en e-transparencia y Tendify (proyectos Fondef), donde gestiono entornos Kubernetes de producción y construyo pipelines CI/CD robustos. ¡Ah, y amo los gatos!",
-        expertise: "Mi experiencia abarca gestión de clusters Kubernetes (k3s bare-metal), flujos GitOps con ArgoCD y automatización integral de CI/CD usando GitLab CI y GitHub Actions. Estoy certificado por Linux Foundation y tengo experiencia práctica en gestión de incidentes de producción, incluyendo recuperación de corrupción de datos PostgreSQL y mejoras de confiabilidad del sistema.",
-        personal: "Cuando no estoy optimizando pipelines de despliegue o solucionando problemas de producción, disfruto jugando videojuegos, juegos de mesa y leyendo libros. También estoy trabajando en un juego de mesa de rol, lo cual ha sido un desafío creativo fantástico. Me encanta experimentar con nuevas herramientas DevOps y contribuir a proyectos de automatización de infraestructura."
+        intro: "¡Hola! Me alegra mucho que estés aquí. Soy Licenciado en Informática por la Universidad de La Frontera, actualmente completando mi práctica profesional en Kubernetes con un cluster de 6 hosts para obtener mi título de Ingeniero en Informática.",
+        expertise: "Con un fuerte enfoque en DevOps e Ingeniería de Confiabilidad de Sitios, trabajo como ingeniero DevOps/SRE en e-transparencia y Tendify (proyectos Fondef), donde gestiono entornos Kubernetes de producción y construyo pipelines CI/CD robustos. Estoy certificado por Linux Foundation con experiencia práctica en gestión de incidentes de producción.",
+        personal: "Lo que me impulsa es mi pasión por los roles SRE/DevOps con alta responsabilidad donde los equipos pueden confiar en mí. Tengo un hambre activa por el conocimiento y la mejora continua en mis habilidades y herramientas. Cuando no estoy optimizando sistemas, disfruto de videojuegos, lectura y proyectos creativos. ¡Ah, y amo los gatos!"
       },
       cta: "Leer más sobre mí"
+    },
+
+    // Mission Section (About Page)
+    mission: {
+      title: "Acerca de Mí",
+      content: {
+        intro: "Bueno, como ya sabrás, soy Licenciado en Informática de la Universidad de La Frontera. Actualmente estoy completando mi práctica profesional enfocada en infraestructura Kubernetes, trabajando con un cluster de 6 hosts para obtener mi título de Ingeniero en Informática. Originalmente estudié otra carrera antes de cambiarme a informática en 2022 porque me encanta programar y quería dedicarme a esto.",
+        evolution: "Con los años, he evolucionado desde trabajar en proyectos variados como APIs backend y aplicaciones interactivas hasta especializarme en DevOps e Ingeniería de Confiabilidad de Sitios. Esta transición ha sido natural porque siempre me ha llamado la atención entender cómo funcionan los sistemas a fondo y asegurarme de que operen de forma confiable a gran escala.",
+        passion: "Lo que realmente me motiva es mi pasión por los roles SRE y DevOps. Me encantan estas posiciones porque ofrecen una perspectiva macro que complementa perfectamente el trabajo de desarrollo. Este enfoque de pensamiento sistémico me resulta súper atractivo - puedo enfocarme en confiabilidad, escalabilidad, automatización y prácticas seguras, asegurando que todo funcione como un sistema integrado.",
+        responsibility: "Me desenvuelvo muy bien en posiciones de alta responsabilidad donde los equipos pueden contar conmigo para mantener infraestructura crítica. Tengo una sed constante de conocimiento y mejora continua - ya sea explorando nuevas funcionalidades de Kubernetes, profundizando en soluciones de monitoreo, o experimentando con nuevas tecnologías DevOps.",
+        personal: "Fuera del trabajo, soy una persona tranquila y relajada. Me gusta mucho la tranquilidad, ambientes pacíficos, tocar instrumentos, y siempre ando escuchando música."
+      },
+      stats: {
+        age: {
+          label: "Edad",
+          value: "25"
+        },
+        pipelines: {
+          label: "Pipelines que fallaron",
+          value: "mejor no preguntar"
+        },
+        cats: {
+          label: "Gatos callejeros que no pude evitar acariciar",
+          value: "999+"
+        },
+        programming: {
+          label: "Horas programando (y contracturas)",
+          value: "demasiadas"
+        }
+      }
     },
 
     // Projects Section

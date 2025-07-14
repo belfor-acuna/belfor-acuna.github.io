@@ -1,6 +1,6 @@
 ---
 import Heading from '../components/about/Heading.astro';
-import Mission from '../components/about/Mission.astro';
+import MissionSection from '../components/vue/MissionSection.vue';
 import Values from '../components/about/Values.astro';
 import Layout from '../layouts/Layout.astro';
 ---
@@ -10,6 +10,6 @@ import Layout from '../layouts/Layout.astro';
   title="Belfor Acuña | About"
 >
   <Heading />
-  <Mission />
+  <MissionSection client:load />
   <Values />
 </Layout>
