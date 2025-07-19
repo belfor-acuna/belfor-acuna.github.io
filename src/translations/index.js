@@ -28,7 +28,7 @@ export const translations = {
       items: {
         containers: {
           name: "Container Orchestration",
-          description: "Proficient in Kubernetes (k3s) cluster management, Helm chart development, and container orchestration. Skilled in Docker containerization, persistent volumes, ConfigMaps, and Kubeseal for secure secret management across multiple environments. Currently exploring entry-level GKE and EKS managed services."
+          description: "Proficient in Kubernetes  cluster management, Helm chart development, and container orchestration. Skilled in Docker containerization, persistent volumes, ConfigMaps, and Kubeseal for secure secret management across multiple environments. Currently exploring entry-level GKE and EKS managed services."
         },
         cicd: {
           name: "CI/CD & GitOps",
@@ -89,7 +89,7 @@ export const translations = {
         items: {
           k8sMigration: {
             name: "Multi-Environment Kubernetes Migration",
-            description: "Successfully migrated deployments from Docker Compose + Nginx to Kubernetes (k3s) across three environments (dev, preprod, prod) using Helm charts, ConfigMaps, and Kubeseal for secure secret management.",
+            description: "Successfully migrated deployments from Docker Compose + Nginx to two Kubernetes clusters across three environments (dev, preprod, prod) using Helm charts, ConfigMaps, and Kubeseal for secure secret management.",
             category: "Infrastructure"
           },
           secureCI: {
@@ -122,13 +122,13 @@ export const translations = {
           period: "Mar 2025 - Present",
           location: "Chile",
           type: "Project",
-          description: "Managing three-environment infrastructure (dev, preprod, prod) on VPS-based Kubernetes (k3s bare-metal) with Traefik load balancing. Leading critical production incident resolution and establishing DevOps-Development communication workflows.",
+          description: "Managing three-environment infrastructure (dev, preprod, prod) on 2 VPS-based Kubernetes clusters with Traefik load balancing. Leading critical production incident resolution and establishing DevOps-Development communication workflows.",
           achievements: [
             "Migrated deployments from Docker Compose + Nginx to Kubernetes using Helm charts, ConfigMaps, and Kubeseal",
-            "Managed DNS on Cloudflare/GoDaddy for etransparencia.cl with self-signed TLS certificates",
-            "Developed CI/CD pipelines in GitHub Actions with environment-based versioning and ArgoCD deployment",
+            "Developed CI/CD pipelines in GitHub Actions with environment-based versioning, static code analysis, coverage reporting and ArgoCD deployment",
             "Led resolution of critical production incidents including PostgreSQL data corruption and service failures",
-            "Documented recovery procedures and established effective DevOps-Development communication workflows"
+            "Documented recovery procedures and established effective DevOps-Development communication workflows",
+            "Managed DNS on Cloudflare for etransparencia.cl.",
           ]
         },
         tendify: {
@@ -142,9 +142,9 @@ export const translations = {
             "Designed architecture for AI-assisted tender generation platform with OpenAI integration",
             "Built backend APIs with NestJS, Flask, and Express for SRS document management and prompt tuning",
             "Developed Vue 3 frontend with WYSIWYG editor, contextual chat, and dynamic document preview",
-            "Migrated infrastructure from Docker Compose + Nginx to Kubernetes (k3s) with Traefik and Helm",
+            "Migrated infrastructure from Docker Compose + Nginx to Kubernetes with Traefik and Helm",
             "Configured GitLab CI/CD for automated Docker image builds and deployments across distributed repositories",
-            "Managed DNS/CDN on Cloudflare R2 for asset storage ensuring low latency and high availability"
+            "Managed DNS on Cloudflare R2 for asset storage ensuring low latency and high availability"
           ]
         }
       },
@@ -259,7 +259,7 @@ export const translations = {
       items: {
         containers: {
           name: "Orquestación de Contenedores",
-          description: "Competente en gestión de clusters Kubernetes (k3s), desarrollo de Helm charts y orquestación de contenedores. Hábil en containerización Docker, volúmenes persistentes, ConfigMaps y Kubeseal para gestión segura de secretos en múltiples entornos. Actualmente explorando servicios administrados GKE y EKS a nivel inicial."
+          description: "Competente en gestión de clusters Kubernetes, desarrollo de Helm charts y orquestación de contenedores. Hábil en containerización Docker, volúmenes persistentes, ConfigMaps y Kubeseal para gestión segura de secretos en múltiples entornos. Actualmente explorando servicios administrados GKE y EKS a nivel inicial."
         },
         cicd: {
           name: "CI/CD y GitOps",
@@ -320,7 +320,7 @@ export const translations = {
         items: {
           k8sMigration: {
             name: "Migración Multi-Entorno a Kubernetes",
-            description: "Migré exitosamente despliegues de Docker Compose + Nginx a Kubernetes (k3s) en tres entornos (dev, preprod, prod) usando Helm charts, ConfigMaps y Kubeseal para gestión segura de secretos.",
+            description: "Migré exitosamente despliegues de Docker Compose + Nginx a Kubernetes  en tres entornos (dev, preprod, prod) usando Helm charts, ConfigMaps y Kubeseal para gestión segura de secretos.",
             category: "Infraestructura"
           },
           secureCI: {
@@ -356,8 +356,8 @@ export const translations = {
           description: "Gestionando infraestructura de tres entornos (dev, preprod, prod) en Kubernetes (k3s bare-metal) basado en VPS con balanceador de carga Traefik. Liderando resolución de incidentes críticos de producción y estableciendo flujos de comunicación DevOps-Desarrollo.",
           achievements: [
             "Migré despliegues de Docker Compose + Nginx a Kubernetes usando Helm charts, ConfigMaps y Kubeseal",
-            "Gestioné DNS en Cloudflare/GoDaddy para etransparencia.cl con certificados TLS auto-firmados",
-            "Desarrollé pipelines CI/CD en GitHub Actions con versionado basado en entornos y despliegue ArgoCD",
+            "Gestioné DNS en Cloudflare/GoDaddy para etransparencia.cl",
+            "Desarrollé pipelines CI/CD en GitHub Actions con versionado basado en entornos, análisis de código, reportes de cobertura y despliegue ArgoCD",
             "Lideré resolución de incidentes críticos de producción incluyendo corrupción de datos PostgreSQL y fallas de servicios",
             "Documenté procedimientos de recuperación y establecí flujos efectivos de comunicación DevOps-Desarrollo"
           ]
@@ -373,9 +373,9 @@ export const translations = {
             "Diseñé arquitectura para plataforma de generación de licitaciones asistida por IA con integración OpenAI",
             "Construí APIs backend con NestJS, Flask y Express para gestión de documentos SRS y ajuste de prompts",
             "Desarrollé frontend Vue 3 con editor WYSIWYG, chat contextual y vista previa dinámica de documentos",
-            "Migré infraestructura de Docker Compose + Nginx a Kubernetes (k3s) con Traefik y Helm",
+            "Migré infraestructura de Docker Compose + Nginx a Kubernetes con Traefik y Helm",
             "Configuré GitLab CI/CD para construcción automatizada de imágenes Docker y despliegues en repositorios distribuidos",
-            "Gestioné DNS/CDN en Cloudflare R2 para almacenamiento de assets asegurando baja latencia y alta disponibilidad"
+            "Gestioné DNS en Cloudflare R2 para almacenamiento de assets asegurando baja latencia y alta disponibilidad"
           ]
         }
       },
