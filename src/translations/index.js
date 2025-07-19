@@ -356,10 +356,10 @@ export const translations = {
           description: "Gestionando infraestructura de tres entornos (dev, preprod, prod) en Kubernetes (k3s bare-metal) basado en VPS con balanceador de carga Traefik. Liderando resolución de incidentes críticos de producción y estableciendo flujos de comunicación DevOps-Desarrollo.",
           achievements: [
             "Migré despliegues de Docker Compose + Nginx a Kubernetes usando Helm charts, ConfigMaps y Kubeseal",
-            "Gestioné DNS en Cloudflare/GoDaddy para etransparencia.cl",
             "Desarrollé pipelines CI/CD en GitHub Actions con versionado basado en entornos, análisis de código, reportes de cobertura y despliegue ArgoCD",
             "Lideré resolución de incidentes críticos de producción incluyendo corrupción de datos PostgreSQL y fallas de servicios",
-            "Documenté procedimientos de recuperación y establecí flujos efectivos de comunicación DevOps-Desarrollo"
+            "Documenté procedimientos de recuperación y establecí flujos efectivos de comunicación DevOps-Desarrollo",
+            "Gestioné DNS en Cloudflare/GoDaddy para etransparencia.cl"
           ]
         },
         tendify: {
