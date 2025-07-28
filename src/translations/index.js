@@ -44,7 +44,7 @@ export const translations = {
         },
         networking: {
           name: "Networking & Security",
-          description: "Skilled in Traefik load balancing, reverse proxy configuration, and TLS/SSL certificate management. Proficient in DNS management across Cloudflare and GoDaddy, UFW firewall configuration, and self-hosted mail server setup with Mailcow."
+          description: "Skilled in Traefik load balancing, reverse proxy configuration, and TLS/SSL certificate management. Proficient in DNS management across Cloudflare and GoDaddy, UFW firewall configuration."
         },
         fullstack: {
           name: "Full Stack Development",
